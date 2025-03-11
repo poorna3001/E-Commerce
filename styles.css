@@ -1,4 +1,35 @@
-/* General Styles */
+/* Mobile Devices (up to 768px) */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .nav-menu {
+        display: none; /* Hide nav menu and use a hamburger menu */
+    }
+
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+}
+
+/* Tablets (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two-column layout */
+    }
+}/* General Styles */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
