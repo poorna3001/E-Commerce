@@ -1,35 +1,123 @@
-/* Mobile Devices (up to 768px) */
-@media (max-width: 768px) {
-    body {
-        font-size: 14px;
-        padding: 10px;
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Default (Mobile-First) */
+body {
+    font-size: 16px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-buttons button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    background: blue;
+    color: white;
+    cursor: pointer;
+}
+
+/* Sections */
+section {
+    padding: 20px;
+}
+
+/* Feature Cards */
+.feature-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.feature-card {
+    background: #f8f8f8;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* Responsive Design */
+
+/* Tablet View */
+@media (min-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px 50px;
     }
 
-    .container {
-        width: 100%;
-        padding: 10px;
+    .nav-links {
+        flex-direction: row;
+        gap: 15px;
     }
 
-    .nav-menu {
-        display: none; /* Hide nav menu and use a hamburger menu */
+    .hero {
+        padding: 50px;
     }
 
-    .hero-section {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .product-grid {
-        grid-template-columns: 1fr; /* Single column layout */
+    .feature-cards {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
-/* Tablets (768px - 1024px) */
-@media (min-width: 768px) and (max-width: 1024px) {
-    .product-grid {
-        grid-template-columns: repeat(2, 1fr); /* Two-column layout */
+/* Desktop View */
+@media (min-width: 1024px) {
+    .feature-cards {
+        grid-template-columns: 1fr 1fr 1fr;
     }
-}/* General Styles */
+
+    .hero {
+        padding: 80px;
+    }
+
+    .about-text,
+    .about-image {
+        width: 50%;
+    }
+
+    .seller-text,
+    .seller-image {
+        width: 50%;
+    }
+
+    section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+/* General Styles */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
