@@ -6,11 +6,6 @@
     font-family: Arial, sans-serif;
 }
 
-/* Default (Mobile-First) */
-body {
-    font-size: 16px;
-}
-
 /* Header */
 header {
     display: flex;
@@ -24,9 +19,9 @@ header {
     top: 0;
     left: 0;
     z-index: 1000;
+    transition: 0.3s ease; /* Smooth transition */
 }
 
-/* Logo */
 .logo h1 {
     margin: 0;
     font-size: 1.5em;
@@ -70,28 +65,31 @@ nav ul li a:hover {
 /* Mobile Styles */
 @media screen and (max-width: 768px) {
     header {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: column; /* Stack the content vertically on mobile */
+        align-items: center;
     }
 
     .nav-links {
-        display: none;  /* Hide links by default */
+        display: none; /* Hide links by default */
         flex-direction: column;
         gap: 10px;
         margin-top: 20px;
+        width: 100%;
+        text-align: center;
     }
 
     .hamburger-menu {
-        display: flex;
+        display: flex; /* Show the hamburger menu on mobile */
     }
 
     .nav-links.active {
-        display: flex; /* Show links when active */
+        display: flex; /* Show the links when active */
     }
 
     nav ul {
         flex-direction: column;
         align-items: center;
+        width: 100%;
     }
 
     nav ul li {
@@ -135,124 +133,8 @@ nav ul li a:hover {
         flex-basis: 19%;
     }
 }
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
 
-/* Default (Mobile-First) */
-body {
-    font-size: 16px;
-}
 
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 10px;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 0;
-}
-
-.nav-links li a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-}
-
-/* Hero Section */
-.hero {
-    text-align: center;
-    padding: 20px;
-}
-
-.hero-buttons button {
-    padding: 10px 20px;
-    margin: 5px;
-    border: none;
-    background: blue;
-    color: white;
-    cursor: pointer;
-}
-
-/* Sections */
-section {
-    padding: 20px;
-}
-
-/* Feature Cards */
-.feature-cards {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 15px;
-}
-
-.feature-card {
-    background: #f8f8f8;
-    padding: 15px;
-    border-radius: 5px;
-}
-
-/* Responsive Design */
-
-/* Tablet View */
-@media (min-width: 768px) {
-    header {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 15px 50px;
-    }
-
-    .nav-links {
-        flex-direction: row;
-        gap: 15px;
-    }
-
-    .hero {
-        padding: 50px;
-    }
-
-    .feature-cards {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-/* Desktop View */
-@media (min-width: 1024px) {
-    .feature-cards {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    .hero {
-        padding: 80px;
-    }
-
-    .about-text,
-    .about-image {
-        width: 50%;
-    }
-
-    .seller-text,
-    .seller-image {
-        width: 50%;
-    }
-
-    section {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-}
 
 /* General Styles */
 body {
