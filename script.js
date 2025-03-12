@@ -24,6 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const navLinks = document.getElementById('nav-links');
 
     hamburgerMenu.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
+        navLinks.classList.toggle('nav-links');
     });
 });
