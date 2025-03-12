@@ -14,17 +14,25 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".hero-buttons button:first-child").addEventListener("click", () => {
         alert("Redirecting to Seller Registration");
     });
-    
+
     document.querySelector(".hero-buttons button:last-child").addEventListener("click", () => {
         alert("Exploring Products");
     });
-    
+
     // Buyer Section Alert
     document.querySelector("#buyer button").addEventListener("click", () => {
         alert("Start Shopping Now");
     });
-    
-    // Mobile Menu Toggle (If needed)
+
+    // Mobile Menu Toggle (Hamburger Menu)
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburgerMenu.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+
+    // Mobile Menu Toggle (Alternative)
     const navToggle = document.createElement("button");
     navToggle.innerText = "☰";
     navToggle.classList.add("nav-toggle");
