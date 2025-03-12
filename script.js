@@ -19,26 +19,11 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("Exploring Products");
     });
 
-    // Buyer Section Alert
-    document.querySelector("#buyer button").addEventListener("click", () => {
-        alert("Start Shopping Now");
-    });
-
     // Mobile Menu Toggle (Hamburger Menu)
     const hamburgerMenu = document.querySelector('.hamburger-menu');
     const navLinks = document.getElementById('nav-links');
 
     hamburgerMenu.addEventListener('click', () => {
         navLinks.classList.toggle('active');
-    });
-
-    // Mobile Menu Toggle (Alternative)
-    const navToggle = document.createElement("button");
-    navToggle.innerText = "☰";
-    navToggle.classList.add("nav-toggle");
-    document.querySelector("header").prepend(navToggle);
-
-    navToggle.addEventListener("click", () => {
-        document.querySelector(".nav-links").classList.toggle("active");
     });
 });
