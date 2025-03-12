@@ -45,7 +45,7 @@ nav ul li a:hover {
     color: #ff5722;
 }
 
-/* Hamburger Menu (Hidden by default) */
+/* Hamburger Menu */
 .hamburger-menu {
     display: none;
     cursor: pointer;
@@ -96,6 +96,7 @@ nav ul li a:hover {
         margin: 10px 0;
     }
 }
+
 
 /* Tablet Layout */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
