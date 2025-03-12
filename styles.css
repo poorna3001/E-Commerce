@@ -53,6 +53,10 @@ nav ul li a:hover {
     justify-content: space-between;
     width: 30px;
     height: 20px;
+    position: absolute; 
+    right: 20px; 
+    top: 50%;  
+    transform: translateY(-50%);
 }
 
 .hamburger-menu .bar {
