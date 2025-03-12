@@ -11,6 +11,143 @@ body {
     font-size: 16px;
 }
 
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Logo */
+.logo h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+/* Navigation Links */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff5722;
+}
+
+/* Hamburger Menu (Hidden by default) */
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+}
+
+.hamburger-menu .bar {
+    background-color: white;
+    height: 4px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        display: none;  /* Hide links by default */
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .nav-links.active {
+        display: flex; /* Show links when active */
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+/* Tablet Layout */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .feature-cards {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .feature-card {
+        flex-basis: 48%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Desktop Layout */
+@media screen and (min-width: 1025px) {
+    .about {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .feature-cards {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .feature-card {
+        flex-basis: 19%;
+    }
+}
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Default (Mobile-First) */
+body {
+    font-size: 16px;
+}
+
 header {
     display: flex;
     flex-direction: column;
