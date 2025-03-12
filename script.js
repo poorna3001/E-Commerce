@@ -21,9 +21,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Mobile Menu Toggle (Hamburger Menu)
     const hamburgerMenu = document.querySelector('.hamburger-menu');
-    const navLinks = document.getElementById('nav-links');
+    const navLinks = document.querySelector('.nav-links');
 
     hamburgerMenu.addEventListener('click', () => {
-        navLinks.classList.toggle('nav-links');
+        navLinks.classList.toggle('active');  // Toggle the active class to show/hide nav
     });
 });
